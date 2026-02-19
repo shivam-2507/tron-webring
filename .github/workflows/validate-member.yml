@@ -28,7 +28,7 @@ jobs:
         run: node scripts/validate-members.js
 
       - name: Check for single member addition
-          run: |
+        run: |
           git fetch origin main
           CHANGED_LINES=$(git diff origin/main HEAD -- members.json | grep -E '^\+.*"name"' | wc -l)
           echo "Number of new members: $CHANGED_LINES"
