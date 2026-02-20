@@ -2,7 +2,8 @@
 // Place this file in the site's root (public/) so it is available at /webring-logic.js
 
 (function () {
-    const MEMBERS_URL = '/members.json';
+    const BASE_PATH = '/tron-webring/';
+    const MEMBERS_URL = BASE_PATH + 'members.json';
 
     function normalizeName(name) {
         return String(name || '')
@@ -23,7 +24,7 @@
 
     function redirect(url) {
         if (!url) {
-            window.location.href = '/';
+            window.location.href = BASE_PATH;
             return;
         }
         window.location.href = url;
@@ -47,7 +48,7 @@
             if (!Array.isArray(members) || members.length === 0) throw new Error('No members');
         } catch (e) {
             console.error('webring: could not load members', e);
-            redirect('/');
+            redirect(BASE_PATH);
             return;
         }
 
@@ -74,7 +75,7 @@
 
         if (idx === -1) {
             // fallback to homepage if no match
-            redirect('/');
+            redirect(BASE_PATH);
             return;
         }
 
@@ -85,7 +86,7 @@
 
         const target = members[targetIndex];
         if (!target || !target.url) {
-            redirect('/');
+            redirect(BASE_PATH);
             return;
         }
 
