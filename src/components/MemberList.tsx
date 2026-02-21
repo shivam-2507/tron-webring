@@ -11,7 +11,7 @@ const MemberList = ({ members }: MemberListProps) => {
   return (
     <div className="w-full max-w-3xl mx-auto px-4 lg:ml-32">
       <div className="space-y-2">
-        <div className="grid grid-cols-[0.8fr_0.6fr_2.6fr] md:grid-cols-[1fr_1fr_2fr] gap-2 md:gap-4 px-3 py-2 text-muted-foreground text-xs font-mono">
+        <div className="grid grid-cols-[1.4fr_0.6fr_2fr] md:grid-cols-[1fr_1fr_2fr] gap-2 md:gap-4 pl-0 pr-3 py-2 text-muted-foreground text-xs font-mono">
           <span>NAME</span>
           <span>YEAR</span>
           <span>URL</span>
@@ -19,10 +19,10 @@ const MemberList = ({ members }: MemberListProps) => {
         {members.map((member) => (
           <div
             key={member.name}
-            className="grid grid-cols-[0.8fr_0.6fr_2.6fr] md:grid-cols-[1fr_1fr_2fr] gap-2 md:gap-4 px-3 py-2 text-xs md:text-sm font-mono"
+            className="grid grid-cols-[1.4fr_0.6fr_2fr] md:grid-cols-[1fr_1fr_2fr] gap-2 md:gap-4 pl-0 pr-3 py-2 text-xs md:text-sm font-mono"
           >
-            <span className="text-foreground">{member.name}</span>
-            <span className="text-muted-foreground">{member.program || member.grad_year || ""}</span>
+            <span className="text-foreground break-words">{member.name}</span>
+            <span className="text-muted-foreground truncate">{member.program || member.grad_year || ""}</span>
             <a
               href={member.url}
               target="_blank"
