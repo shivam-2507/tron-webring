@@ -23,5 +23,10 @@
         "name": "Aryaan Ray",
         "grad_year": 2029,
         "url": "https://aryaanray.vercel.app/"
+    },
+    {
+        "name": "test name",
+	"grad_year": 2028,
+	"url":"google.com"
     }
 ]
