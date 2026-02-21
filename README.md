@@ -28,6 +28,8 @@ Open to all current MTE students or alumni at the University of Waterloo in Wate
   "grad_year": 2029,
   "url": "https://johndoe.dev"
 }
+
+Please be sure to add LinkedIn or another similar URL when submitting the PR.
 ```
 
 ## Development
@@ -58,7 +60,9 @@ Built with the help of [Lovable](https://lovable.dev/) • Contributions welcome
 
 ---
 
-**Made with ❤️ by Shivam Walia**
+**Made with ❤️ by Shivam Walia**  
+Contact: [shivam.walia@uwaterloo.ca](mailto:shivam.walia@uwaterloo.ca)
+
 
 
 
